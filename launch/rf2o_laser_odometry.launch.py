@@ -23,11 +23,13 @@ def generate_launch_description():
                 output='screen',
                 parameters=[{
                     'laser_scan_topic' : '/scan',
-                    'odom_topic' : '/odom_rf2o',
+#                    'odom_topic' : '/odom_rf2o', 
+                    'odom_topic' : '/odom', # Changed by Biswash to match with slam toolbox
                     'publish_tf' : True,
                     'base_frame_id' : 'base_link',
                     'odom_frame_id' : 'odom',
                     'init_pose_from_topic' : '',
-                    'freq' : 20.0}],
+                    'freq' : 10.0         # Changed by Biswash 
+                    }],
             ),
     ])
